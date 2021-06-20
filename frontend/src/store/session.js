@@ -42,7 +42,6 @@ export const login = (user) => async (dispatch) => {
   return response;
 };
 
-// signup user
 export const signup = (user) => async (dispatch) => {
   const { username, email, password } = user;
   const response = await csrfFetch("/api/users", {
@@ -84,5 +83,7 @@ const sessionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+
 
 export default sessionReducer;
