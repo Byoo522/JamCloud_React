@@ -1,1 +1,86 @@
+.app-title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #5469D4;
+  letter-spacing: 1px;
+}
 
+.body-container {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ecf0f3;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+}
+
+
+.form-container {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ECF0F3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+#inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.input-1, .input-2 {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.input-1:placeholder-shown, .input-2:placeholder-shown {
+  padding-left: 13px;
+}
+
+.label-1, .label-2, .input-1, .input-2, .submit-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.label-1, .label-2 {
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: #5469D4;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  border: solid lightslategrey 4px;
+}
+
+#modal-content {
+  border-radius: 20px;
+}
+
+#modal-background {
+  background: #ECF0F3;
+}

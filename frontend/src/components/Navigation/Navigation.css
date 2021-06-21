@@ -1,0 +1,13 @@
+li {
+  list-style-type: none;
+ }
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.home-link {
+    margin: 10px;
+}
