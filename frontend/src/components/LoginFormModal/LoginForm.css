@@ -39,16 +39,15 @@
 .input-1, .input-2 {
   background: #ecf0f3;
   padding: 10px;
-  padding-left: 20px;
+  padding-left: 2px;
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  text-indent: 20px;
 }
 
-.input-1:placeholder-shown, .input-2:placeholder-shown {
-  padding-left: 13px;
-}
+
 
 .label-1, .label-2, .input-1, .input-2, .submit-button {
   display: block;
