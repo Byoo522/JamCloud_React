@@ -10,8 +10,19 @@ width: 100%;
 }
 
 a {
-  margin: 5px;
+  margin: 10px;
   text-decoration: unset;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px
+}
+
+a:hover {
+  border: solid #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 
@@ -20,4 +31,6 @@ button {
   color: #ffffff;
   font-weight: bold;
   background-color: #5469D4;
+  font-size: larger;
+  border-radius: 8px;
 }

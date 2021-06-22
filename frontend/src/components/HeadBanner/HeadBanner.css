@@ -1,13 +1,28 @@
-.head-banner {
-  background: url(../../images/music-bars.jpg) no-repeat;
-  min-height: 100%;
-  min-width: 1024px;
+body {
+  background: url(../../images/music-bars.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 100%; */
+  /* min-width: 1024px; */
 
   width: 100%;
-  height: auto;
+  height: 100%;
 
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }
+
+.head-banner-app-title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 80px;
+  text-shadow: 4px 4px #5469D4;
+  margin-bottom: 0px;
+}
+
+
+@media screen and (max-width: 100%){};
