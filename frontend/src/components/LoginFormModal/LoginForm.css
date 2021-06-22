@@ -1,4 +1,6 @@
 .app-title {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
   font-weight: bold;
   font-size: 1.7rem;
@@ -27,8 +29,8 @@
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
-  background: #ECF0F3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  background: #fff;
+  box-shadow: 14px 14px 14px 14px rgb(46, 45, 45), -14px -14px 20px 14px rgb(46, 45, 45);
 }
 
 #inputs {
@@ -43,7 +45,7 @@
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px rgb(233, 229, 229);
   text-indent: 20px;
 }
 
@@ -80,6 +82,6 @@
   border-radius: 20px;
 }
 
-#modal-background {
+/* #modal-background {
   background: #ECF0F3;
-}
+} */
