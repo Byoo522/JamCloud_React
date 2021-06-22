@@ -35,7 +35,7 @@ function Root() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root className="nav-container" />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

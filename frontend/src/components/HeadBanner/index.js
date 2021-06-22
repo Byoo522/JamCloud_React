@@ -1,5 +1,5 @@
 import React from 'react';
-// import music-bars from '../..'
+import musicBars from '../../images/musicBars.jpg';
 import '../HeadBanner/HeadBanner.css';
 
 
