@@ -20,7 +20,19 @@
   font-size: 80px;
   text-shadow: 4px 4px #5469D4;
   margin-bottom: 0px;
+  margin-top: 120px;
 }
+
+
+.banner-text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: none;
+  text-shadow: 2px 2px #5469D4;
+  font-size: 25px;
+}
+
 
 
 @media screen and (max-width: 100%){};
