@@ -4,7 +4,7 @@ body {
 margin: 0;
 padding: 0;
 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
-background: #fff;
+background: #dcdcdc;
 height: 100%;
 width: 100%;
 }
@@ -29,10 +29,21 @@ a:hover {
 
 button {
   color: #ffffff;
-  font-weight: bold;
   background-color: #5469D4;
   font-size: larger;
   border-radius: 8px;
   margin-right: 5px;
   margin-left: 5px;
 }
+
+footer {
+  /* font-family: Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif; */
+  display: flex;
+  justify-content: center;
+  background-color: rgb(60, 60, 60);
+  height: 45px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+

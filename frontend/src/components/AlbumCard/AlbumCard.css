@@ -1,0 +1,23 @@
+.album-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  height: 700px;
+  width: 100%;
+}
+
+.card {
+  margin: 1.5rem;
+  height: 300px;
+  width: 250px;
+  background-color: coral;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.2s;
+  animation: ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
+}
