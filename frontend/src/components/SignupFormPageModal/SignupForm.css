@@ -1,0 +1,10 @@
+.signup-form-container {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 3px 3px 14px 14px rgb(46, 45, 45), -14px -14px 20px 14px rgb(46, 45, 45);
+}
