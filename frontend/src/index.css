@@ -33,4 +33,6 @@ button {
   background-color: #5469D4;
   font-size: larger;
   border-radius: 8px;
+  margin-right: 5px;
+  margin-left: 5px;
 }

@@ -68,6 +68,7 @@ function SignupForm() {
             <input
               type="password"
               className="input-2"
+              placeholder="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -80,6 +81,7 @@ function SignupForm() {
             <input
               className="input-2"
               type="password"
+              placeholder="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required

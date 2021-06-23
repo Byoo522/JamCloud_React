@@ -72,6 +72,8 @@
   height: 40px;
   border-radius: 20px;
   font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .submit-button:hover {

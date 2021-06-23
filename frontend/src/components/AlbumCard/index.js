@@ -6,3 +6,5 @@ function AlbumCard() {
     <div>AlbumCard</div>
   )
 }
+
+export default AlbumCard;
