@@ -36,6 +36,10 @@ button {
   margin-left: 5px;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 footer {
   /* font-family: Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif; */
   display: flex;
@@ -45,5 +49,3 @@ footer {
   margin: 0;
   padding-top: 10px;
 }
-
-

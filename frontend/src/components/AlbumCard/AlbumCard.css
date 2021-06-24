@@ -1,23 +1,100 @@
+.album-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
 .album-card-container {
   display: flex;
   flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
-  height: 700px;
+  height: 100%;
   width: 100%;
+
 }
 
-.card {
-  margin: 1.5rem;
-  height: 300px;
-  width: 250px;
-  background-color: coral;
+.card-container {
+  margin: 1.7rem;
+  height: 330px;
+  width: 300px;
+  background-color: #5469D4;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.2s;
   animation: ease-in-out;
 }
 
-.card:hover {
+.card-container:hover {
   transform: scale(1.1);
   box-shadow: 0px 0px 15px 0px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+  color: #fff;
+}
+
+.card-1 {
+  background-image: url('../../images/album/Avicii/addicted_to_you.jpg');
+  height: 300px;
+  width: 300px;
+}
+
+.card-2 {
+  background-image: url('../../images/album/Avicii/fade_into_darkness.jpg');
+  height: 300px;
+  width: 300px;
+}
+
+.card-3 {
+  background-image: url('../../images/album/Avicii/hey_brother.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-4 {
+  background-image: url('../../images/album/Avicii/lay_me_down.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-5 {
+  background-image: url('../../images/album/Avicii/the_nights.png');
+  height: 300px;
+  width: 300px;
+}
+.card-6 {
+  background-image: url('../../images/album/Avicii/street_dancer.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-7 {
+  background-image: url('../../images/album/Avicii/you_make_me.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-8 {
+  background-image: url('../../images/album/Avicii/true.png');
+  height: 300px;
+  width: 300px;
+}
+.card-9 {
+  background-image: url('../../images/album/Illenium/ascend.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-10 {
+  background-image: url('../../images/album/Illenium/ashes.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-11 {
+  background-image: url('../../images/album/Illenium/awake.jpg');
+  height: 300px;
+  width: 300px;
+}
+.card-12 {
+  background-image: url('../../images/album/Zedd/clarity.png');
+  height: 300px;
+  width: 300px;
 }

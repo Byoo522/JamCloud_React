@@ -77,7 +77,12 @@
 }
 
 .submit-button:hover {
-  border: solid lightslategrey 4px;
+  color: #ffffff;
+  background-color: #5469D4;
+  font-size: larger;
+  border-radius: 8px;
+  margin-right: 5px;
+  margin-left: 5px;
 
   transform: scale(1.1);
 }
