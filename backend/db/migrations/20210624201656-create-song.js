@@ -11,12 +11,12 @@ module.exports = {
       userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: "Users" }
+        references: { model: 'Users' }
       },
       albumId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: "Albums" }
+        references: { model: 'Albums' }
       },
       url: {
         allowNull: false,
@@ -28,11 +28,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       }
     });
   },

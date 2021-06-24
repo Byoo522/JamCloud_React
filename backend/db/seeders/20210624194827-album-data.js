@@ -9,8 +9,7 @@ module.exports = {
       Example:
       */
     return queryInterface.bulkInsert('Albums', [
-      { title: 'Addicted To You', imageUrl: 'imageUrl will go here' },
-      { title: 'Fade Into Darkness', imageUrl: 'imageUrl will go here' },
+      { userId: 4, title: 'Addicted To You', imageUrl: 'imageUrl will go here' },
     ], {});
   },
 
