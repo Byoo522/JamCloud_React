@@ -1,10 +1,14 @@
 // This file will contain all the actions specific to the session user's information and the session user's Redux reducer.
-// frontend/src/store/session.js
+// Define an initial state
+// Define a reducer
+// Export a reducer
 import { csrfFetch } from './csrf';
 
+// Define Action Types as Constants
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
+// Define Action Creators
 const setUser = (user) => {
   return {
     type: SET_USER,
@@ -18,6 +22,8 @@ const removeUser = () => {
     type: REMOVE_USER,
   };
 };
+
+// Define Thunks
 
 // restore user session
 export const restoreUser = () => async dispatch => {
@@ -65,6 +71,8 @@ export const logout = () => async (dispatch) => {
   dispatch(removeUser());
   return response;
 };
+
+
 
 const initialState = { user: null };
 

@@ -1,9 +1,17 @@
-// backend/routes/api/users.js
+// Create router here
+// Since we are doing database work, we need an asyncHandler in case our database fetch fails
+
+// import the database stuff that we need
+
+// Create the API route here
+// Export the router!
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 
+// we will also import middleware and validators
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User } = require('../../db/models'); // importing the database stuff
+
 
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
@@ -11,18 +19,16 @@ const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
 
-router.post(
-  '/',
-  asyncHandler(async (req, res) => {
-    const { email, password, username } = req.body;
-    const user = await User.signup({ email, username, password });
+router.post('/', asyncHandler(async (req, res) => {
+  const { email, password, username } = req.body;
+  const user = await User.signup({ email, username, password });
 
-    await setTokenCookie(res, user);
+  await setTokenCookie(res, user);
 
-    return res.json({
-      user,
-    });
-  }),
+  return res.json({
+    user,
+  });
+}),
 );
 
 const validateSignup = [
