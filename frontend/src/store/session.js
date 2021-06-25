@@ -1,4 +1,7 @@
 // This file will contain all the actions specific to the session user's information and the session user's Redux reducer.
+// Define Action Types as Constants
+// Define Action Creators
+// Define Thunks
 // Define an initial state
 // Define a reducer
 // Export a reducer
@@ -23,12 +26,12 @@ const removeUser = () => {
   };
 };
 
-// Define Thunks
+// Define Thunks - data returned in Thunks need to be parsed into readable data
 
 // restore user session
 export const restoreUser = () => async dispatch => {
   const response = await csrfFetch('/api/session');
-  const data = await response.json();
+  const data = await response.json(); // backend .json. sequelize.findall returns an array
   dispatch(setUser(data.user));
   return response;
 };
@@ -73,9 +76,10 @@ export const logout = () => async (dispatch) => {
 };
 
 
-
+// Define an initial state
 const initialState = { user: null };
 
+// Define a reducer
 const sessionReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
@@ -93,5 +97,5 @@ const sessionReducer = (state = initialState, action) => {
 };
 
 
-
+// Export the reducer
 export default sessionReducer;
