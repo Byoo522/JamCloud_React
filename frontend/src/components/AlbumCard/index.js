@@ -1,10 +1,27 @@
-import React from 'react';
+// Import hooks from 'react'. Which hook is meant for causing side effects?
+// Import hooks from react-redux;
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+// import the action here
+import { getAlbums } from '../../store/album';
 import '../AlbumCard/AlbumCard.css';
 
 function AlbumCard() {
+  // Declare variables from hooks
+  const dispatch = useDispatch();
+  const albums = useSelector((state) => Object.values(state.albums)) // Object.values turns the values of albums into an array
+
+  // Use a 'react' hook and cause a side effect
+  useEffect(() => {
+    dispatch(getAlbums())
+  }, [dispatch])
+
   return (
     <>
       <h1 className="album-header">Discover New Music.</h1>
+      {/* <div>
+        {albums.map((album) => <h3>{album.title}</h3>)}
+      </div> */}
       <div className="album-card-container">
         <div className="card-container">
           <div className="card-1"></div>
