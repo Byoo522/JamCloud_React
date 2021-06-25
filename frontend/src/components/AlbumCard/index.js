@@ -18,10 +18,7 @@ function AlbumCard() {
 
   return (
     <>
-      <h1 className="album-header">Discover New Music.</h1>
-      {/* <div>
-        {albums.map((album) => <h3>{album.title}</h3>)}
-      </div> */}
+      <h1 className="album-header">Upload Your Music.</h1>
       <div className="album-card-container">
         <div className="card-container">
           <div className="card-1"></div>

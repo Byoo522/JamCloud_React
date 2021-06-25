@@ -1,0 +1,63 @@
+.album-page-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.album-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.album-page-card-container {
+  margin: 1.7rem;
+  height: 330px;
+  width: 300px;
+  background-color: #5469D4;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.2s;
+  animation: ease-in-out;
+}
+
+.album-page-card-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+.card {
+  background-image: url('../../images/album/Avicii/addicted_to_you.jpg');
+  height: 300px;
+  width: 300px;
+}
+
+.album-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+  color: #fff;
+
+}
+
+.add-album {
+  background-image: url('../../images/add-album.png');
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  margin: 1.7rem;
+  height: 300px;
+  width: 300px;
+  font-weight: bold;
+  animation: ease-in-out;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.2s;
+  }
+
+.add-album:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
+}

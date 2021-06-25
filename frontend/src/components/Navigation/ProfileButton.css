@@ -1,0 +1,18 @@
+.profile-dropdown {
+
+}
+
+.profile-item {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+
+}
+
+.profile-button {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -30,8 +30,9 @@ function Navigation({ isLoaded }) {
   return (
     <div className="nav">
       <ul className="nav-container">
-        <li className='home-link'>
+        <li className='nav-link'>
           <NavLink exact to="/">Home</NavLink>
+          <NavLink to="/albums">Albums</NavLink>
           {isLoaded && sessionLinks}
         </li>
       </ul>
