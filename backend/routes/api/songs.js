@@ -6,7 +6,7 @@ const { restoreUser } = require('../../utils/auth');
 const { Song } = require('../../db/models');
 
 // get all songs
-router.get('/', asyncHandler(async (req, res) => {
+router.get('/', restoreUser, asyncHandler(async (req, res) => {
   const songs = await Song.findAll();
   // sends album to front end. need to wrap in object if we want to send more
   res.json(songs);
@@ -17,7 +17,7 @@ router.delete('/:id', asyncHandler(async (req, res) => {
   const songId = req.params.id;
   const songToDelete = await Song.findByPk(songId);
   songToDelete.destroy();
-  return res.json('Your song has been deleted.')
+  return res.json(`'${songToDelete.title}' has been deleted.`)
 }))
 
 // add song
@@ -31,8 +31,8 @@ router.post('/', asyncHandler(async (req, res) => {
 }),
 );
 
-// edit albums - play around
-router.put('/:id', asyncHandler(async (req, res) => {
+// edit songs - play around
+router.put('/:id', restoreUser, asyncHandler(async (req, res) => {
   const songId = req.params.id;
   const { userId, albumId, url, title } = req.body;
   const songToEdit = await Song.findByPk(songId); // grabs the album

@@ -6,7 +6,7 @@ const { restoreUser } = require('../../utils/auth');
 const { Album } = require('../../db/models');
 
 // get all albums
-router.get('/', asyncHandler(async (req, res) => {
+router.get('/', restoreUser, asyncHandler(async (req, res) => {
   const albums = await Album.findAll();
   // sends album to front end. need to wrap in object if we want to send more
   res.json(albums);
@@ -17,7 +17,7 @@ router.delete('/:id', asyncHandler(async (req, res) => {
   const albumId = req.params.id;
   const albumToDelete = await Album.findByPk(albumId);
   albumToDelete.destroy();
-  return res.json('Your album has been deleted.')
+  return res.json(`'${albumToDelete.title}' has been deleted.`)
 }))
 
 // add albums
@@ -32,7 +32,7 @@ router.post('/', asyncHandler(async (req, res) => {
 );
 
 // edit albums - play around
-router.put('/:id', asyncHandler(async (req, res) => {
+router.put('/:id', restoreUser, asyncHandler(async (req, res) => {
   const albumId = req.params.id;
   const { userId, title, imageUrl } = req.body;
   const albumToEdit = await Album.findByPk(albumId); // grabs the album
