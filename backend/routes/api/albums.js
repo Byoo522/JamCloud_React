@@ -26,13 +26,19 @@ router.post('/', asyncHandler(async (req, res) => {
   const newAlbum = await Album.create({ userId, title, imageUrl });
 
   return res.json({
-    album,
+    newAlbum,
   });
 }),
 );
 
 // edit albums
-router.put('/')
+router.put('/:id', asyncHandler(async (req, res) => {
+  const albumId = req.params.id;
+  const albumToEdit = await Album.findByPk(albumId);
+  const editedAlbum = await albumToEdit.update({ title, imageUrl })
+
+  return res.json({ editedAlbum })
+}))
 
 
 
