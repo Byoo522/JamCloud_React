@@ -31,12 +31,15 @@ router.post('/', asyncHandler(async (req, res) => {
 }),
 );
 
-// edit albums
+// edit albums - play around
 router.put('/:id', asyncHandler(async (req, res) => {
   const albumId = req.params.id;
-  const albumToEdit = await Album.findByPk(albumId);
-  const editedAlbum = await albumToEdit.update({ title, imageUrl })
-
+  const { userId, title, imageUrl } = req.body;
+  const albumToEdit = await Album.findByPk(albumId); // grabs the album
+  const editedAlbum = await albumToEdit.update({ userId, title, imageUrl }) // updates album
+  // Method 2
+  // albumToEdit.update({ userId, title, imageUrl })
+  // return res.json({ albumToEdit })
   return res.json({ editedAlbum })
 }))
 
