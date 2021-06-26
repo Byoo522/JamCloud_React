@@ -10,6 +10,9 @@ import { ModalProvider } from "./context/Modal";
 import configureStore from "./store";
 import { restoreCSRF, csrfFetch } from "./store/csrf";
 import * as sessionActions from "./store/session";
+// import * as albumActions from "./store/album";
+// import * as songActions from "./store/song";
+// import * as commentActions from "./store/comment";
 
 const store = configureStore();
 
@@ -19,6 +22,9 @@ if (process.env.NODE_ENV !== "production") {
   window.csrfFetch = csrfFetch;
   window.store = store;
   window.sessionActions = sessionActions;
+  // window.albumActions = albumActions;
+  // window.songActions = songActions;
+  // window.comment = commentActions;
 }
 
 function Root() {

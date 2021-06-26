@@ -2,11 +2,21 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
 
-const { restoreUser } = require('../../utils/auth');
+const { restoreUser, requireAuth } = require('../../utils/auth');
+// require auth
+
 const { Album } = require('../../db/models');
 
 // get all albums
 router.get('/', restoreUser, asyncHandler(async (req, res) => {
+  const albums = await Album.findAll();
+  // sends album to front end. need to wrap in object if we want to send more
+  res.json(albums);
+}));
+
+// get all albums for current user.*req.user.id
+router.get('/', restoreUser, asyncHandler(async (req, res) => {
+  const id = req.params.id;
   const albums = await Album.findAll();
   // sends album to front end. need to wrap in object if we want to send more
   res.json(albums);

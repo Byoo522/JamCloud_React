@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
+  margin-left: 2rem;
 }
 
 .album-page-card-container {
@@ -29,9 +30,10 @@
 }
 
 .card {
-  background-image: url('../../images/album/Avicii/addicted_to_you.jpg');
+  /* background-image: url('../../images/album/Avicii/addicted_to_you.jpg'); */
   height: 300px;
   width: 300px;
+  /* background-color: black; */
 }
 
 .album-content {
@@ -55,6 +57,7 @@
   animation: ease-in-out;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.2s;
+  color: black;
   }
 
 .add-album:hover {
