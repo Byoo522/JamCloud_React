@@ -24,7 +24,11 @@ function AlbumsPage() {
         {albums.map((album) =>
           <div className="album-page-card-container">
             <div className="card" style={{ backgroundImage: `url("${album.imageUrl}")` }} ></div>
-            <div className="album-content">{album.title}</div>
+            <div className="album-content">
+              {album.title}
+              <button className="edit-button">Edit</button>
+              <button className="delete-button">Delete</button>
+            </div>
           </div>)}
         <button className="add-album">Add Album Cover</button>
       </div>
