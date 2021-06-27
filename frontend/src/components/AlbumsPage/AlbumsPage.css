@@ -16,7 +16,7 @@
 
 .album-page-card-container {
   margin: 1.7rem;
-  height: 330px;
+  height: 335px;
   width: 300px;
   background-color: #5469D4;
   box-shadow: 0px 0px 15px -5px;
@@ -30,11 +30,10 @@
 }
 
 .card {
-  /* background-image: url('../../images/album/Avicii/addicted_to_you.jpg'); */
+  background-size: 300px 300px;
   height: 300px;
   width: 300px;
-  /* background-color: black; */
-}
+  }
 
 .album-content {
   display: flex;
@@ -67,4 +66,5 @@
 
 .edit-button, .delete-button {
   background-color: grey;
+  padding: 1px;
 }

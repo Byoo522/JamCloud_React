@@ -6,7 +6,8 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import HeadBanner from "./components/HeadBanner";
 import AlbumCard from "./components/AlbumCard";
-import AlbumsPage from './components/AlbumsPage'
+import AlbumsPage from './components/AlbumsPage';
+import AddAlbumButton from "./components/AlbumsPage/AddAlbumButton";
 // import SignupFormPage from "./components/SignupFormPage";
 
 
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route path="/albums">
             <AlbumsPage />
+            <AddAlbumButton />
           </Route>
         </Switch>
       )}

@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAlbums } from '../../store/album';
 
 
+
 import '../AlbumsPage/AlbumsPage.css';
 
 
 
-function AlbumsPage() {
+function AlbumsPage({ isLoaded }) {
   // Declare variables from hooks
   const dispatch = useDispatch();
   const albums = useSelector((state) => Object.values(state.albums)) // Object.values turns the values of albums into an array

@@ -1,8 +1,9 @@
+import { csrfFetch } from "./csrf";
 // Define Action Types as Constants
 export const SET_ALBUMS = 'albums/SET_ALBUMS';
-// export const ADD_ALBUMS = 'albums/ADD_ALBUMS';
+export const ADD_ALBUMS = 'albums/ADD_ALBUMS';
 // export const EDIT_ALBUMS = 'albums/EDIT_ALBUMS';
-// export const REMOVE_ALBUMS = 'albums/REMOVE_ALBUMS';
+export const REMOVE_ALBUMS = 'albums/REMOVE_ALBUMS';
 
 // Define Action Creators
 const setAlbums = (albums, userId) => ({
@@ -10,10 +11,10 @@ const setAlbums = (albums, userId) => ({
   albums,
 })
 
-// const addAlbums = (albums) => ({
-//   type: ADD_ALBUMS,
-//   albums,
-// })
+const addAlbums = (albums) => ({
+  type: ADD_ALBUMS,
+  albums,
+})
 
 // const editAlbums = (albums) => ({
 //   type: EDIT_ALBUMS,
@@ -34,21 +35,21 @@ export const getAlbums = () => async (dispatch) => {
 }
 
 
-// export const addAlbums = () => async (dispatch) => {
-//   const res = await fetch('/api/albums', {
-//     method: 'post',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.strigify(data),
-//   })
+export const createAlbums = (data) => async (dispatch) => {
+  const res = await csrfFetch('/api/albums', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
 
-//   if (response.ok) {
-//     const album = await response.json();
-//     dispatch(addAlbums(album));
-//     return album;
-//   }
-// }
+  if (res.ok) {
+    const album = await res.json();
+    dispatch(addAlbums(album));
+    return album;
+  }
+}
 
 // export const editAlbums = data => async dispatch => {
 //   const response = await fetch(`/api/albums/${albumId}`, {
@@ -84,6 +85,7 @@ const initialState = {};
 
 // Define a Reducer
 const albumsReducer = (state = initialState, action) => {
+  let newState;
   switch (action.type) {
     case SET_ALBUMS:
       const allAlbums = {};
@@ -94,12 +96,19 @@ const albumsReducer = (state = initialState, action) => {
         ...state,
         ...allAlbums,
       }
+
+    case ADD_ALBUMS: {
+      newState = Object.assign({}, state);
+      newState.albums = action.payload;
+      return newState;
+    }
+
     // case REMOVE_ALBUMS: {
     //   const newState = { ...state };
     //   delete newState[action.albumId];
     //   return newState;
     // }
-    // case ADD_ALBUMS:
+
     // case EDIT_ALBUMS: {
     //   return {
     //     ...state,

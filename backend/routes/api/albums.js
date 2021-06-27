@@ -2,7 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
 
-const { restoreUser, requireAuth } = require('../../utils/auth');
+const { restoreUser } = require('../../utils/auth');
 // require auth
 
 const { Album } = require('../../db/models');
@@ -11,16 +11,18 @@ const { Album } = require('../../db/models');
 router.get('/', restoreUser, asyncHandler(async (req, res) => {
   const albums = await Album.findAll();
   // sends album to front end. need to wrap in object if we want to send more
+
   res.json(albums);
+
 }));
 
 // get all albums for current user.*req.user.id
-router.get('/', restoreUser, asyncHandler(async (req, res) => {
-  const id = req.params.id;
-  const albums = await Album.findAll();
-  // sends album to front end. need to wrap in object if we want to send more
-  res.json(albums);
-}));
+// router.get('/', restoreUser, asyncHandler(async (req, res) => {
+//   const id = req.params.id;
+//   const albums = await Album.findAll();
+//   // sends album to front end. need to wrap in object if we want to send more
+//   res.json(albums);
+// }));
 
 // delete albums
 router.delete('/:id', asyncHandler(async (req, res) => {
@@ -47,9 +49,7 @@ router.put('/:id', restoreUser, asyncHandler(async (req, res) => {
   const { userId, title, imageUrl } = req.body;
   const albumToEdit = await Album.findByPk(albumId); // grabs the album
   const editedAlbum = await albumToEdit.update({ userId, title, imageUrl }) // updates album
-  // Method 2
-  // albumToEdit.update({ userId, title, imageUrl })
-  // return res.json({ albumToEdit })
+
   return res.json({ editedAlbum })
 }))
 
