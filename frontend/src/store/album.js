@@ -21,15 +21,14 @@ const addAlbums = (albums) => ({
 //   albums,
 // })
 
-// const removeAlbums = (albums, userId) => ({
-//   type: REMOVE_ALBUMS,
-//   albumId,
-//   userId
-// })
+const removeAlbums = (albumId) => ({
+  type: REMOVE_ALBUMS,
+  albumId,
+})
 
 // Define Thunks
 export const getAlbums = () => async (dispatch) => {
-  const res = await fetch('/api/albums');
+  const res = await csrfFetch('/api/albums');
   const albums = await res.json();
   dispatch(setAlbums(albums));
 }
@@ -51,6 +50,17 @@ export const createAlbums = (data) => async (dispatch) => {
   }
 }
 
+export const deleteAlbums = albumId => async dispatch => {
+  const res = await csrfFetch(`/api/albums/${albumId}`, {
+    method: 'delete',
+  });
+
+  if (res.ok) {
+    const albumToDelete = await res.json();
+    dispatch(removeAlbums(albumToDelete));
+  }
+};
+
 // export const editAlbums = data => async dispatch => {
 //   const response = await fetch(`/api/albums/${albumId}`, {
 //     method: 'put',
@@ -67,17 +77,6 @@ export const createAlbums = (data) => async (dispatch) => {
 //   }
 // };
 
-// export const removeAlbums = albumId => async dispatch => {
-//   const response = await fetch(`/api/albums/${albumId}`, {
-//     method: 'delete',
-//   });
-
-//   if (response.ok) {
-//     const item = await response.json();
-//     dispatch(removeAlbums(album.title, album.imageUrl));
-//     return `'${album.title}' has been deleted.`
-//   }
-// };
 
 
 // Define an Initial State
@@ -103,11 +102,11 @@ const albumsReducer = (state = initialState, action) => {
       return newState;
     }
 
-    // case REMOVE_ALBUMS: {
-    //   const newState = { ...state };
-    //   delete newState[action.albumId];
-    //   return newState;
-    // }
+    case REMOVE_ALBUMS: {
+      const newState = { ...state };
+      delete newState[action.albumId];
+      return newState;
+    }
 
     // case EDIT_ALBUMS: {
     //   return {
