@@ -21,52 +21,52 @@ function AlbumCard() {
       <h1 className="album-header">Upload Your Music.</h1>
       <div className="album-card-container">
         <div className="card-container">
-          <div className="card-1"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-1" ></div>
+          <div className="card-content">The Beatles</div>
         </div>
         <div className="card-container">
           <div className="card-2"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Elvis Presley</div>
         </div>
         <div className="card-container">
           <div className="card-3"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Eagles</div>
         </div>
         <div className="card-container">
           <div className="card-4"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Michael Jackson</div>
         </div>
         <div className="card-container">
           <div className="card-5"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Led Zeppelin</div>
         </div>
         <div className="card-container">
           <div className="card-6"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Jay-Z</div>
         </div>
         <div className="card-container">
           <div className="card-7"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Eminem</div>
         </div>
         <div className="card-container">
           <div className="card-8"></div>
-          <div className="card-content">Avicii</div>
+          <div className="card-content">Mariah Carey</div>
         </div>
         <div className="card-container">
           <div className="card-9"></div>
-          <div className="card-content">Illenium</div>
+          <div className="card-content">Metallica</div>
         </div>
         <div className="card-container">
           <div className="card-10"></div>
-          <div className="card-content">Illenium</div>
+          <div className="card-content">Queen</div>
         </div>
         <div className="card-container">
           <div className="card-11"></div>
-          <div className="card-content">Illenium</div>
+          <div className="card-content">Kanye West</div>
         </div>
         <div className="card-container">
           <div className="card-12"></div>
-          <div className="card-content">Zedd</div>
+          <div className="card-content">Illenium</div>
         </div>
       </div>
     </>

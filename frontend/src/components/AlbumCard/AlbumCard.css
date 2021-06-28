@@ -37,64 +37,67 @@
 }
 
 .card-1 {
-  background-image: url('../../images/album/Avicii/addicted_to_you.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg');
   height: 300px;
   width: 300px;
 }
 
 .card-2 {
-  background-image: url('../../images/album/Avicii/fade_into_darkness.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Elvis_Pure_Gold_Album.jpg/220px-Elvis_Pure_Gold_Album.jpg');
   height: 300px;
   width: 300px;
 }
 
 .card-3 {
-  background-image: url('../../images/album/Avicii/hey_brother.jpg');
+  background-image: url('https://img.discogs.com/oy5TlWHteENJApAgpmcOCvL8Ea4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4805545-1512594460-3189.jpeg.jpg');
   height: 300px;
   width: 300px;
 }
 .card-4 {
-  background-image: url('../../images/album/Avicii/lay_me_down.jpg');
+  background-image: url('https://img.discogs.com/eQPe8Zif9I79ISHD_zYTOWUVBTg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-152946-1552811215-1076.jpeg.jpg');
   height: 300px;
   width: 300px;
 }
 .card-5 {
-  background-image: url('../../images/album/Avicii/the_nights.png');
+  background-image: url('https://www.thatericalper.com/wp-content/uploads/2014/01/Led-Zeppelin-1-Vinyl-Album-Cover-300x300.jpg');
   height: 300px;
   width: 300px;
 }
 .card-6 {
-  background-image: url('../../images/album/Avicii/street_dancer.jpg');
+  background-image: url('https://img.discogs.com/J4sezSGyf48ADKEx3YLvs_BnAGM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4604184-1454052998-8725.png.jpg');
   height: 300px;
   width: 300px;
 }
 .card-7 {
-  background-image: url('../../images/album/Avicii/you_make_me.jpg');
+  background-image: url('https://img.discogs.com/Bn5AqaiFavlUGLSofw1eA_UJOq4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-317115-1585991675-6724.jpeg.jpg');
   height: 300px;
   width: 300px;
 }
 .card-8 {
-  background-image: url('../../images/album/Avicii/true.png');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/9/97/Mariah_Carey_-_album.png');
   height: 300px;
   width: 300px;
 }
 .card-9 {
-  background-image: url('../../images/album/Illenium/ascend.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg');
   height: 300px;
   width: 300px;
 }
 .card-10 {
-  background-image: url('../../images/album/Illenium/ashes.jpg');
+  background-image: url('https://i.pinimg.com/originals/af/c7/c8/afc7c82e94fc2e1f598581b5feaa861d.jpg');
+  background-position: center;
+  background-size: contain;
+
   height: 300px;
   width: 300px;
 }
 .card-11 {
-  background-image: url('../../images/album/Illenium/awake.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg');
   height: 300px;
   width: 300px;
 }
 .card-12 {
-  background-image: url('../../images/album/Zedd/clarity.png');
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Ashes_Illenium.jpg');
   height: 300px;
   width: 300px;
 }
