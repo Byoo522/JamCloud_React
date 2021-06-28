@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
+import { Modal } from '../../context/Modal'; // added
 import { getAlbums, deleteAlbums, createAlbums } from '../../store/album';
+import AddAlbumButton from './AddAlbumButton';
 // import * as albumActions from "../../store/album";
 
 import '../AlbumsPage/AlbumsPage.css';
@@ -15,7 +17,8 @@ function AlbumsPage({ isLoaded }) {
   const userId = sessionUser.id;
   const albums = useSelector((state) => Object.values(state.albums)) // Object.values turns the values of albums into an array
   const history = useHistory();
-  const [title, setTitle] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [title, setTitle] = useState(''); // added
   const [imageUrl, setImageUrl] = useState('');
 
   const handleDelete = (e) => {
@@ -42,14 +45,20 @@ function AlbumsPage({ isLoaded }) {
       <div className="album-page-container">
         {albums.map((album) =>
           <div className="album-page-card-container">
-            <div className="card" style={{ backgroundImage: `url("${album.imageUrl}")` }} ></div>
+            <div className="card" style={{ backgroundImage: `url('${album.imageUrl}')` }} ></div>
             <div className="album-content">
               {album.title}
               <button type="submit" className="edit-button">Edit</button>
               <button type="submit" className="delete-button" onSubmit={handleDelete}>Delete</button>
             </div>
           </div>)}
-        <button className="add-album">Add Album Cover</button>
+        <button className="add-album" onClick={() => setShowModal(true)}>Add Album Cover</button>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <AddAlbumButton />
+          </Modal>
+        )}
+
       </div>
     </>
   )

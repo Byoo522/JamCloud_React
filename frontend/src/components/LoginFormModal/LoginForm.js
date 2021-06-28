@@ -31,11 +31,11 @@ function LoginForm() {
         <div className="app-title">JamCloud</div>
         <div>
           <label id="inputs" className="label-1">
-            EMAIL
+            USERNAME
             <input
               type="text"
               className="input-1"
-              placeholder="example@test.com"
+              placeholder="username"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
               required

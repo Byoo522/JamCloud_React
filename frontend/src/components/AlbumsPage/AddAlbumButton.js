@@ -22,9 +22,9 @@ function AddAlbumButton() {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-container" onSubmit={handleSubmit}>
       <h1 className="app-title">Add Album Cover</h1>
-      <div>
+      <div >
         <label id="inputs" className="label-1">
           Title
           <input
@@ -51,7 +51,7 @@ function AddAlbumButton() {
         </label>
       </div>
       <button type="submit" className="submit-button">Add Album</button>
-    </form>
+    </form >
   )
 }
 
